@@ -1,5 +1,7 @@
 # WeChatSDK
-本项目基于微信官方WP8 SDK编写，适用于Windows 10 UWP应用和WP8.1 WinRT应用。本项目仅供学习交流参考。
+本项目基于微信官方WP8 SDK编写，适用于Windows 10 UWP应用和WP8.1 WinRT应用。UWP项目中还提供WeChatSDK.Extensions，封装部分微信Open API，方便在使用SDK登录授权后，获取用户基本资料等需求。
+
+本项目仅供学习交流参考。
 
 使用方法
 -----------------------------------
