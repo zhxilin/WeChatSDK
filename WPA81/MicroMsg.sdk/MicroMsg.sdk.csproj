@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MicroMsg.sdk</RootNamespace>
+    <AssemblyName>MicroMsg.sdk</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <TargetPlatform Include="Windows, Version=8.1" />
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseReq.cs" />
+    <Compile Include="BaseResp.cs" />
+    <Compile Include="ConstantsAPI.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="GetMessageFromWX.cs" />
+    <Compile Include="IWXAPI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="protobuf\BaseReqP.cs" />
+    <Compile Include="protobuf\BaseRespP.cs" />
+    <Compile Include="protobuf\GetMessageFromWXReq.cs" />
+    <Compile Include="protobuf\GetMessageFromWXResp.cs" />
+    <Compile Include="protobuf\Proto\BaseReqP.cs" />
+    <Compile Include="protobuf\Proto\BaseRespP.cs" />
+    <Compile Include="protobuf\Proto\GetMessageFromWXReq.cs" />
+    <Compile Include="protobuf\Proto\GetMessageFromWXResp.cs" />
+    <Compile Include="protobuf\Proto\SendAuthReq.cs" />
+    <Compile Include="protobuf\Proto\SendAuthResp.cs" />
+    <Compile Include="protobuf\Proto\SendMessageToWXReq.cs" />
+    <Compile Include="protobuf\Proto\SendMessageToWXResp.cs" />
+    <Compile Include="protobuf\Proto\SendPayReqP.cs" />
+    <Compile Include="protobuf\Proto\SendPayRespP.cs" />
+    <Compile Include="protobuf\Proto\ShowMessageFromWXReq.cs" />
+    <Compile Include="protobuf\Proto\ShowMessageFromWXResp.cs" />
+    <Compile Include="protobuf\Proto\TransactDataP.cs" />
+    <Compile Include="protobuf\Proto\WXAppExtendMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXEmojiMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXFileMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXImageMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXMusicMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXTextMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXVideoMessageP.cs" />
+    <Compile Include="protobuf\Proto\WXWebpageMessageP.cs" />
+    <Compile Include="protobuf\SendAuthReq.cs" />
+    <Compile Include="protobuf\SendAuthResp.cs" />
+    <Compile Include="protobuf\SendMessageToWXReq.cs" />
+    <Compile Include="protobuf\SendMessageToWXResp.cs" />
+    <Compile Include="protobuf\SendPayReqP.cs" />
+    <Compile Include="protobuf\SendPayRespP.cs" />
+    <Compile Include="protobuf\ShowMessageFromWXReq.cs" />
+    <Compile Include="protobuf\ShowMessageFromWXResp.cs" />
+    <Compile Include="protobuf\TransactDataP.cs" />
+    <Compile Include="protobuf\WXAppExtendMessageP.cs" />
+    <Compile Include="protobuf\WXEmojiMessageP.cs" />
+    <Compile Include="protobuf\WXFileMessageP.cs" />
+    <Compile Include="protobuf\WXImageMessageP.cs" />
+    <Compile Include="protobuf\WXMessageP.cs" />
+    <Compile Include="protobuf\WXMusicMessageP.cs" />
+    <Compile Include="protobuf\WXTextMessageP.cs" />
+    <Compile Include="protobuf\WXVideoMessageP.cs" />
+    <Compile Include="protobuf\WXWebpageMessageP.cs" />
+    <Compile Include="SendAuth.cs" />
+    <Compile Include="SendMessageToWX.cs" />
+    <Compile Include="SendPay.cs" />
+    <Compile Include="ShowMessageFromWX.cs" />
+    <Compile Include="TransactData.cs" />
+    <Compile Include="utils\ABCDStruct.cs" />
+    <Compile Include="utils\FileUtil.cs" />
+    <Compile Include="utils\MD5Util.cs" />
+    <Compile Include="WXAPIFactory.cs" />
+    <Compile Include="WXApiImpl.cs" />
+    <Compile Include="WXAppExtendMessage.cs" />
+    <Compile Include="WXBaseMessage.cs" />
+    <Compile Include="WXEmojiMessage.cs" />
+    <Compile Include="WXEntryBasePage.cs" />
+    <Compile Include="WXException.cs" />
+    <Compile Include="WXFileMessage.cs" />
+    <Compile Include="WXImageMessage.cs" />
+    <Compile Include="WXMusicMessage.cs" />
+    <Compile Include="WXTextMessage.cs" />
+    <Compile Include="WXVideoMessage.cs" />
+    <Compile Include="WXWebpageMessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Google.ProtocolBuffersLite, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Google.ProtocolBuffersLite.2.4.1.555\lib\cf35\Google.ProtocolBuffersLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffersLite.Serialization, Version=2.4.1.555, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Google.ProtocolBuffersLite.2.4.1.555\lib\cf35\Google.ProtocolBuffersLite.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

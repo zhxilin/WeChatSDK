@@ -1,0 +1,161 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMsg.sdk", "UWP\MicroMsg.sdk\MicroMsg.sdk.csproj", "{4AB9D358-FF4C-4823-B10F-A30175F55018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatDemo", "UWP\WeChatDemo\WeChatDemo.csproj", "{8E734497-10EA-47F7-80AB-0AA57E47BA3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UWP", "UWP", "{FFF8D1D8-4AC8-47D6-A415-8748E17B75C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPA81", "WPA81", "{5C3C6B09-288B-4671-8BCB-83EB099F0435}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMsg.sdk", "WPA81\MicroMsg.sdk\MicroMsg.sdk.csproj", "{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatDemo", "WPA81\WeChatDemo\WeChatDemo.csproj", "{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeChatSDK.Extensions", "UWP\WeChatSDK.Extensions\WeChatSDK.Extensions.csproj", "{8576D472-7496-4B47-842C-5F581330CA7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|ARM.ActiveCfg = Debug|ARM
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|ARM.Build.0 = Debug|ARM
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|x64.ActiveCfg = Debug|x64
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|x64.Build.0 = Debug|x64
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|x86.ActiveCfg = Debug|x86
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Debug|x86.Build.0 = Debug|x86
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|ARM.ActiveCfg = Release|ARM
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|ARM.Build.0 = Release|ARM
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|x64.ActiveCfg = Release|x64
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|x64.Build.0 = Release|x64
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|x86.ActiveCfg = Release|x86
+		{4AB9D358-FF4C-4823-B10F-A30175F55018}.Release|x86.Build.0 = Release|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|ARM.Build.0 = Debug|ARM
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|ARM.Deploy.0 = Debug|ARM
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|x64.ActiveCfg = Debug|x64
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|x64.Build.0 = Debug|x64
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|x64.Deploy.0 = Debug|x64
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|x86.ActiveCfg = Debug|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|x86.Build.0 = Debug|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Debug|x86.Deploy.0 = Debug|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|Any CPU.ActiveCfg = Release|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|ARM.ActiveCfg = Release|ARM
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|ARM.Build.0 = Release|ARM
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|ARM.Deploy.0 = Release|ARM
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|x64.ActiveCfg = Release|x64
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|x64.Build.0 = Release|x64
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|x64.Deploy.0 = Release|x64
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|x86.ActiveCfg = Release|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|x86.Build.0 = Release|x86
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C}.Release|x86.Deploy.0 = Release|x86
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|x64.Build.0 = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Debug|x86.Build.0 = Debug|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|ARM.Build.0 = Release|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|x64.ActiveCfg = Release|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|x64.Build.0 = Release|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|x86.ActiveCfg = Release|Any CPU
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79}.Release|x86.Build.0 = Release|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|ARM.Build.0 = Debug|ARM
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|x64.Build.0 = Debug|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|x86.ActiveCfg = Debug|x86
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|x86.Build.0 = Debug|x86
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Debug|x86.Deploy.0 = Debug|x86
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|ARM.ActiveCfg = Release|ARM
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|ARM.Build.0 = Release|ARM
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|ARM.Deploy.0 = Release|ARM
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|x64.ActiveCfg = Release|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|x64.Build.0 = Release|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|x64.Deploy.0 = Release|Any CPU
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|x86.ActiveCfg = Release|x86
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|x86.Build.0 = Release|x86
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669}.Release|x86.Deploy.0 = Release|x86
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|ARM.Build.0 = Debug|ARM
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|x64.ActiveCfg = Debug|x64
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|x64.Build.0 = Debug|x64
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|x86.ActiveCfg = Debug|x86
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Debug|x86.Build.0 = Debug|x86
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|ARM.ActiveCfg = Release|ARM
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|ARM.Build.0 = Release|ARM
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|x64.ActiveCfg = Release|x64
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|x64.Build.0 = Release|x64
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|x86.ActiveCfg = Release|x86
+		{8576D472-7496-4B47-842C-5F581330CA7F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4AB9D358-FF4C-4823-B10F-A30175F55018} = {FFF8D1D8-4AC8-47D6-A415-8748E17B75C4}
+		{8E734497-10EA-47F7-80AB-0AA57E47BA3C} = {FFF8D1D8-4AC8-47D6-A415-8748E17B75C4}
+		{5FF3DDF1-5299-4C13-B5E3-1B2AD8AD9C79} = {5C3C6B09-288B-4671-8BCB-83EB099F0435}
+		{A6A3FD06-E0AE-4A78-9D7B-543A630BD669} = {5C3C6B09-288B-4671-8BCB-83EB099F0435}
+		{8576D472-7496-4B47-842C-5F581330CA7F} = {FFF8D1D8-4AC8-47D6-A415-8748E17B75C4}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://zhxilin.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UWP\\MicroMsg.sdk\\MicroMsg.sdk.csproj
+		SccProjectTopLevelParentUniqueName1 = MicroMsg.sdk.sln
+		SccProjectName1 = UWP/MicroMsg.sdk
+		SccLocalPath1 = UWP\\MicroMsg.sdk
+		SccProjectUniqueName2 = UWP\\WeChatDemo\\WeChatDemo.csproj
+		SccProjectTopLevelParentUniqueName2 = MicroMsg.sdk.sln
+		SccProjectName2 = UWP/WeChatDemo
+		SccLocalPath2 = UWP\\WeChatDemo
+		SccProjectUniqueName3 = WPA81\\MicroMsg.sdk\\MicroMsg.sdk.csproj
+		SccProjectTopLevelParentUniqueName3 = MicroMsg.sdk.sln
+		SccProjectName3 = WPA81/MicroMsg.sdk
+		SccLocalPath3 = WPA81\\MicroMsg.sdk
+		SccProjectUniqueName4 = WPA81\\WeChatDemo\\WeChatDemo.csproj
+		SccProjectTopLevelParentUniqueName4 = MicroMsg.sdk.sln
+		SccProjectName4 = WPA81/WeChatDemo
+		SccLocalPath4 = WPA81\\WeChatDemo
+		SccProjectUniqueName5 = UWP\\WeChatSDK.Extensions\\WeChatSDK.Extensions.csproj
+		SccProjectTopLevelParentUniqueName5 = MicroMsg.sdk.sln
+		SccProjectName5 = UWP/WeChatSDK.Extensions
+		SccLocalPath5 = UWP\\WeChatSDK.Extensions
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="WeChatDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeChatDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Padding="10">
+            <ComboBox x:Name="ComboBox" ItemsSource="{x:Bind Targets}" PlaceholderText="请选择分享目标" MinWidth="200">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate x:DataType="local:ShareScene">
+                        <TextBlock Text="{x:Bind Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Content="分享文字" Margin="0,10" Click="{x:Bind ShareText}"/>
+            <Button Content="分享图片" Margin="0,10" Click="{x:Bind ShareImage}"/>
+            <Button Content="分享链接" Margin="0,10" Click="{x:Bind ShareLink}"/>
+            <Button Content="授权登录" Margin="0,30" Click="{x:Bind SendAuth}"/>
+        </StackPanel>
+    </Grid>
+</Page>
