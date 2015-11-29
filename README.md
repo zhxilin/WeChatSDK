@@ -8,7 +8,7 @@
 #### 访问[微信开放平台](https://open.weixin.qq.com/)注册应用，SDK使用方法同官方文档基本一致
 
 > __分享文本消息__
-```csharp 
+```
 try
 {
     var scene = SendMessageToWX.Req.WXSceneTimeline;
@@ -101,7 +101,7 @@ catch (WXException ex)
 ```
 
 ####分享结果回调和登录授权回调
-* 打开Pakcage.appxmanifest文件，在Extensions节点下添加文件关联协议
+* 打开`Pakcage.appxmanifest`文件，在`Extensions`节点下添加文件关联协议
 ```
 <Extensions>
     <uap:Extension Category="windows.fileTypeAssociation">
@@ -113,53 +113,52 @@ catch (WXException ex)
     </uap:Extension>
 </Extensions>
 ```
-* 在你的项目中，创建一个类WeChatCallback类，继承WXEntryBasePage类，重载`OnSendMessageToWXResponse`方法和`OnSendAuthResponse`处理回调结果。
+* 在你的项目中，创建一个类`WeChatCallback`类，继承`WXEntryBasePage`类，重载`OnSendMessageToWXResponse`方法和`OnSendAuthResponse`处理回调结果。
 ，如
 ```
-        public override async void OnSendMessageToWXResponse(SendMessageToWX.Resp response)
-        {
-            base.OnSendMessageToWXResponse(response);
-            var dialog = new MessageDialog(response.ErrCode == 0 ? "分享成功": "分享失败");
-            await dialog.ShowAsync();
-        }
+public override async void OnSendMessageToWXResponse(SendMessageToWX.Resp response)
+{
+    base.OnSendMessageToWXResponse(response);
+    var dialog = new MessageDialog(response.ErrCode == 0 ? "分享成功": "分享失败");
+    await dialog.ShowAsync();
+}
 
-        public override async void OnSendAuthResponse(SendAuth.Resp response)
+public override async void OnSendAuthResponse(SendAuth.Resp response)
+{
+    base.OnSendAuthResponse(response);
+    if (response.ErrCode == 0)
+    {
+        if (!string.IsNullOrEmpty(response.Code))
         {
-            base.OnSendAuthResponse(response);
-            if (response.ErrCode == 0)
+            var token = await WeChatSns.GetAccessTokenAsync(response.Code);
+            if (token != null)
             {
-                if (!string.IsNullOrEmpty(response.Code))
-                {
-                    var token = await WeChatSns.GetAccessTokenAsync(response.Code);
-                    if (token != null)
-                    {
-                        var user = await WeChatSns.GetUserInfoAsync(token.AccessToken, token.OpenId);
-
-                        var dialog = new MessageDialog($"name:{user.Nickname}\r\nopenid:{user.OpenId}","授权成功");
-                        await dialog.ShowAsync();
-                    }
-                }
-            }
-            else
-            {
-                var dialog = new MessageDialog("授权失败");
+                var user = await WeChatSns.GetUserInfoAsync(token.AccessToken, token.OpenId);
+                var dialog = new MessageDialog($"name:{user.Nickname}\r\nopenid:{user.OpenId}","授权成功");
                 await dialog.ShowAsync();
             }
         }
+    }
+    else
+    {
+        var dialog = new MessageDialog("授权失败");
+        await dialog.ShowAsync();
+    }
+}
 ```
 * 微信处理结果点击“返回XXX（应用名）”后，会在App.xaml.cs中触发OnFileActivated事件，在事件中处理微信返回结果：
 ```
-        protected override void OnFileActivated(FileActivatedEventArgs args)
-        {
-            base.OnFileActivated(args);
-            try
-            {
-                var wechat = new WeChatCallback();
-                wechat.Handle(args);
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
+protected override void OnFileActivated(FileActivatedEventArgs args)
+{
+    base.OnFileActivated(args);
+    try
+    {
+        var wechat = new WeChatCallback();
+        wechat.Handle(args);
+    }
+    catch (Exception)
+    {
+        // ignored
+    }
+}
 ```
