@@ -51,7 +51,7 @@ namespace MicroMsg.sdk
             }
         }
 
-        public async Task<string> SendReq(BaseReq request, string targetAppId = ConstantsAPI.WECHAT_APP_ID)
+        public async Task<string> SendReqAsync(BaseReq request, string targetAppId = ConstantsAPI.WECHAT_APP_ID)
         {
             int p = 0;
             try
@@ -109,7 +109,7 @@ namespace MicroMsg.sdk
             }
         }
 
-        public async Task<bool> SendResp(BaseResp response, string targetAppId)
+        public async Task<bool> SendRespAsync(BaseResp response, string targetAppId)
         {
             if (response == null)
             {

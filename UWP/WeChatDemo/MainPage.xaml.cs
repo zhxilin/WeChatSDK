@@ -59,7 +59,7 @@ namespace WeChatDemo
                 };
                 SendMessageToWX.Req req = new SendMessageToWX.Req(message, scene);
                 IWXAPI api = WXAPIFactory.CreateWXAPI("[YOUR APP ID]");
-                var isValid = await api.SendReq(req);
+                var isValid = await api.SendReqAsync(req);
             }
             catch (WXException ex)
             {
@@ -92,7 +92,7 @@ namespace WeChatDemo
 
                     SendMessageToWX.Req req = new SendMessageToWX.Req(message, scene);
                     IWXAPI api = WXAPIFactory.CreateWXAPI("[YOUR APP ID]");
-                    var isValid = await api.SendReq(req);
+                    var isValid = await api.SendReqAsync(req);
                 }
             }
             catch (WXException ex)
@@ -127,7 +127,7 @@ namespace WeChatDemo
                     };
                     SendMessageToWX.Req req = new SendMessageToWX.Req(message, scene);
                     IWXAPI api = WXAPIFactory.CreateWXAPI("[YOUR APP ID]");
-                    var isValid = await api.SendReq(req);
+                    var isValid = await api.SendReqAsync(req);
                 }
             }
             catch (WXException ex)
@@ -143,7 +143,7 @@ namespace WeChatDemo
                 SendAuth.Req req = new SendAuth.Req(AppSettings.Scope, "test");
 
                 IWXAPI api = WXAPIFactory.CreateWXAPI(AppSettings.AppId);
-                var isValid = await api.SendReq(req);
+                var isValid = await api.SendReqAsync(req);
             }
             catch (WXException ex)
             {

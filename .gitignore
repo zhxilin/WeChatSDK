@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/WPA81/WeChatDemo/obj
+/WPA81/MicroMsg.sdk/obj
+/UWP/WeChatDemo/obj
+/UWP/WeChatSDK.Extensions/obj
+/UWP/MicroMsg.sdk/obj

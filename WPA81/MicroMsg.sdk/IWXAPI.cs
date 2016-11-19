@@ -6,8 +6,8 @@ namespace MicroMsg.sdk
     {
         
         void OpenWXApp();
-        Task<string> SendReq(BaseReq request, string targetAppId = ConstantsAPI.WECHAT_APP_ID);
-        Task<bool> SendResp(BaseResp response, string targetAppId = ConstantsAPI.WECHAT_APP_ID);
+        Task<string> SendReqAsync(BaseReq request, string targetAppId = ConstantsAPI.WECHAT_APP_ID);
+        Task<bool> SendRespAsync(BaseResp response, string targetAppId = ConstantsAPI.WECHAT_APP_ID);
     }
 
 }

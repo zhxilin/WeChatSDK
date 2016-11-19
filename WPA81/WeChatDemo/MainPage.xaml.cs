@@ -56,7 +56,7 @@ namespace WeChatDemo
                     SendAuth.Req req = new SendAuth.Req("[YOUR SCOPE]", "test");
 
                     IWXAPI api = WXAPIFactory.CreateWXAPI("[YOUR APP ID]");
-                    var isok = await api.SendReq(req);
+                    var isok = await api.SendReqAsync(req);
                 }
                 catch (WXException)
                 {

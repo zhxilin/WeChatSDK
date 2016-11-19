@@ -31,7 +31,7 @@ namespace MicroMsg.sdk.utils
             }
         }
 
-        public async static Task<bool> CreateDir(string strPath)
+        public async static Task<bool> CreateDirAsync(string strPath)
         {
             if (!string.IsNullOrEmpty(strPath))
             {
@@ -64,7 +64,7 @@ namespace MicroMsg.sdk.utils
 
         }
 
-        public async static Task<bool> DeleteFile(string fileName)
+        public async static Task<bool> DeleteFileAsync(string fileName)
         {
             if (!string.IsNullOrEmpty(fileName))
             {
@@ -89,7 +89,7 @@ namespace MicroMsg.sdk.utils
             return false;
         }
 
-        public async static Task<bool> DirExists(string path)
+        public async static Task<bool> DirExistsAsync(string path)
         {
             try
             {
@@ -158,7 +158,7 @@ namespace MicroMsg.sdk.utils
             return false;
         }
 
-        public async static Task<bool> FileExists(string path)
+        public async static Task<bool> FileExistsAsync(string path)
         {
             try
             {
@@ -183,7 +183,7 @@ namespace MicroMsg.sdk.utils
             return false;
         }
 
-        public async static Task<long> FileLength(string path)
+        public async static Task<long> GetFileLengthAsync(string path)
         {
             if (!string.IsNullOrEmpty(path))
             {
@@ -203,7 +203,7 @@ namespace MicroMsg.sdk.utils
             return 0L;
         }
 
-        public async static Task<long> GetFileExistTime(string path)
+        public async static Task<long> GetFileExistTimeAsync(string path)
         {
             try
             {
@@ -221,7 +221,7 @@ namespace MicroMsg.sdk.utils
             return 0L;
         }
 
-        public async static Task<byte[]> ReadFromFile(string fileName)
+        public async static Task<byte[]> ReadFromFileAsync(string fileName)
         {
             if (!string.IsNullOrEmpty(fileName))
             {
@@ -257,7 +257,7 @@ namespace MicroMsg.sdk.utils
             return null;
         }
 
-        public async static Task<byte[]> ReadFromFile(string path, int offset, int count)
+        public async static Task<byte[]> ReadFromFileAsync(string path, int offset, int count)
         {
             try
             {
@@ -294,7 +294,7 @@ namespace MicroMsg.sdk.utils
             return null;
         }
 
-        public async static Task<bool> WriteToFile(string fileName, string folderName, byte[] data, bool bCreateDir = false)
+        public async static Task<bool> WriteToFileAsync(string fileName, string folderName, byte[] data, bool bCreateDir = false)
         {
             if (!string.IsNullOrEmpty(fileName) && (data != null))
             {
