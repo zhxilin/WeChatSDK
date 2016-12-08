@@ -121,13 +121,13 @@ namespace MicroMsg.sdk
             }
         }
 
-        public async static Task<TransactData> ReadFromFile(string fileName)
+        public async static Task<TransactData> ReadFromFileAsync(string fileName)
         {
-            byte[] sourceArray = await FileUtil.ReadFromFile(fileName, 0, 0x40);
+            byte[] sourceArray = await FileUtil.ReadFromFileAsync(fileName, 0, 0x40);
             byte[] destinationArray = new byte[4];
             Array.Copy(sourceArray, 2, destinationArray, 0, 4);
             int count = BitConverter.ToInt32(destinationArray, 0);
-            TransactDataP protoObj = TransactDataP.ParseFrom((await FileUtil.ReadFromFile(fileName, 0x40, count)));
+            TransactDataP protoObj = TransactDataP.ParseFrom((await FileUtil.ReadFromFileAsync(fileName, 0x40, count)));
             TransactData data = new TransactData();
             data.FromProto(protoObj);
             return data;
@@ -227,7 +227,7 @@ namespace MicroMsg.sdk
             byte[] buffer2 = data.ToProto().ToByteArray();
             int length = buffer2.Length;
             Array.Copy(BitConverter.GetBytes(length), 0, destinationArray, 2, 4);
-            await FileUtil.WriteToFile(fileName, folderName, destinationArray, true);
+            await FileUtil.WriteToFileAsync(fileName, folderName, destinationArray, true);
             FileUtil.AppendToFile(fileName, folderName, buffer2);
         }
     }

@@ -42,17 +42,17 @@ namespace MicroMsg.sdk
         {
             try
             {
-                if (!await FileUtil.DirExists(ConstantsAPI.SDK_TEMP_DIR_PATH))
+                if (!await FileUtil.DirExistsAsync(ConstantsAPI.SDK_TEMP_DIR_PATH))
                 {
-                    await FileUtil.CreateDir(ConstantsAPI.SDK_TEMP_DIR_PATH);
+                    await FileUtil.CreateDirAsync(ConstantsAPI.SDK_TEMP_DIR_PATH);
                 }
 
                 var folder = await ApplicationData.Current.LocalFolder.GetFolderAsync(ConstantsAPI.SDK_TEMP_DIR_PATH);
                 var copyFile = await file.CopyAsync(folder, "wp.wechat", NameCollisionOption.ReplaceExisting);
 
-                if (await FileUtil.FileExists(ConstantsAPI.SDK_TEMP_FILE_PATH))
+                if (await FileUtil.FileExistsAsync(ConstantsAPI.SDK_TEMP_FILE_PATH))
                 {
-                    TransactData data = await TransactData.ReadFromFile(ConstantsAPI.SDK_TEMP_FILE_PATH);
+                    TransactData data = await TransactData.ReadFromFileAsync(ConstantsAPI.SDK_TEMP_FILE_PATH);
                     if (!data.ValidateData())
                     {
                         //MessageBox.Show("数据验证失败");

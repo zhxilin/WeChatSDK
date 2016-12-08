@@ -1,4 +1,5 @@
-﻿namespace MicroMsg.sdk
+﻿using System;
+namespace MicroMsg.sdk
 {
     public class ConstantsAPI
     {
@@ -16,5 +17,9 @@
         public const string SDK_VERSION = "1.6";
         public const string THIRD_APP_ID = "wechatapp";
         public const string WECHAT_APP_ID = "wechat";
+        public static async System.Threading.Tasks.Task<bool> CanOpenWXAppAsync()
+        {
+            return (await Windows.System.Launcher.FindFileHandlersAsync(".wechat")).Count > 0;
+        }
     }
 }

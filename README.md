@@ -21,7 +21,7 @@ try
     };
     SendMessageToWX.Req req = new SendMessageToWX.Req(message, scene);
     IWXAPI api = WXAPIFactory.CreateWXAPI("[YOUR APP ID]");
-    var isValid = await api.SendReq(req);
+    var isValid = await api.SendReqAsync(req);
 }
 catch (WXException ex)
 {
@@ -92,7 +92,7 @@ try
 {
     SendAuth.Req req = new SendAuth.Req("[YOUR SCOPE]", "test");
     IWXAPI api = WXAPIFactory.CreateWXAPI("[YOUR APP ID]");
-    var isValid = await api.SendReq(req);
+    var isValid = await api.SendReqAsync(req);
 }
 catch (WXException ex)
 {
